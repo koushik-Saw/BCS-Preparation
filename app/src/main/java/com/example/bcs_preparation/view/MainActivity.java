@@ -1,8 +1,10 @@
-package com.example.bcs_preparation;
+package com.example.bcs_preparation.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.bcs_preparation.R;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -10,7 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BCS_preparation">
         <activity
-            android:name=".MainActivity"
+            android:name=".view.Dashboard"
+            android:exported="false" />
+        <activity
+            android:name=".view.authentication.Forgorpassword"
+            android:exported="false" />
+        <activity
+            android:name=".view.authentication.Singup"
+            android:exported="false" />
+        <activity
+            android:name=".view.authentication.Login"
+            android:exported="false" />
+        <activity
+            android:name=".view.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
