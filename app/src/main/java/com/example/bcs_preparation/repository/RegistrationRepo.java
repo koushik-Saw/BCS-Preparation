@@ -30,7 +30,6 @@ public class RegistrationRepo {
 
     UserRegistration userRegistration;
 
-
     public MutableLiveData<String> regUser(String name,String phone, String password){
         MutableLiveData mutableLiveData = new MutableLiveData();
         JsonObject jsonObject = new JsonObject();
