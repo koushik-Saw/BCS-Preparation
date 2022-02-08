@@ -8,7 +8,10 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.bcs_preparation.R;
+import com.example.bcs_preparation.model.UserRegistration;
 import com.example.bcs_preparation.viewmodel.RegistrationViewModel;
+
+import java.util.List;
 
 public class Singup extends AppCompatActivity {
     RegistrationViewModel viewModel;
@@ -18,10 +21,10 @@ public class Singup extends AppCompatActivity {
         setContentView(R.layout.activity_singup);
 
         viewModel = new ViewModelProvider(this).get(RegistrationViewModel.class);
-        viewModel.regUser2("D","01878077313","123456").observe(this, new Observer<String>() {
+        viewModel.regUser2("D","01878077913","123456").observe(this, new Observer<List<UserRegistration.Body>>() {
             @Override
-            public void onChanged(String s) {
-                Log.e("tag", "onChanged: "+s);
+            public void onChanged(List<UserRegistration.Body> bodies) {
+
             }
         });
     }

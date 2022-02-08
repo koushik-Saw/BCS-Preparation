@@ -12,5 +12,5 @@ import retrofit2.http.POST;
 
 public interface ApiServices {
     @POST("users/create/")
-    Call<List<UserRegistration.Body>> creatUser(@Body JsonObject jsonObject);
+    Call<List<UserRegistration.Body>> creatUser();
 }

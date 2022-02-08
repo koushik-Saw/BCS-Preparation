@@ -40,10 +40,10 @@ public class RegistrationRepo {
         Log.e("TAG", "regUser: "+jsonObject.toString() );
         ApiServices apiServices = RetrofitInstance.getRetrofitInstance().create(ApiServices.class);
 
-        apiServices.creatUser(jsonObject).enqueue(new Callback<List<UserRegistration.Body>>() {
+        apiServices.creatUser().enqueue(new Callback<List<UserRegistration.Body>>() {
             @Override
             public void onResponse(Call<List<UserRegistration.Body>> call, Response<List<UserRegistration.Body>> response) {
-                Log.e("TAG", "onFailure: "+response.body().toString() );
+                Log.e("TAG", "onFailure: "+response.body() );
                 if (response.isSuccessful()){
                     mutableLiveData.postValue("Success");
                     Log.e("TAG", "onResponse: "+"Success" );
