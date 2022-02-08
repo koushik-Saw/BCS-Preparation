@@ -6,10 +6,6 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
-import com.example.bcs_preparation.repository.RegistrationRepo;
-
-import java.util.List;
-
 public class RegistrationViewModel extends AndroidViewModel {
     RegistrationRepo repo ;
     LiveData mutableLiveData2;

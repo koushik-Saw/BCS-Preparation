@@ -10,8 +10,6 @@ import com.example.network.ApiServices;
 import com.example.network.RetrofitInstance;
 import com.google.gson.JsonObject;
 
-import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -37,17 +35,22 @@ public class RegistrationRepo {
         jsonObject.addProperty("name",name);
         jsonObject.addProperty("phone",phone);
         jsonObject.addProperty("password",password);
-        Log.e("TAG", "regUser: "+jsonObject.toString() );
+
+        //jsonbody
+        JsonObject jsonBody = new JsonObject();
+        jsonBody.add("body",jsonObject);
+
+        Log.e("TAG", "regUser: "+jsonBody.toString() );
         ApiServices apiServices = RetrofitInstance.getRetrofitInstance().create(ApiServices.class);
 
-        apiServices.creatUser(jsonObject).enqueue(new Callback<UserRegistration.Body>() {
+        apiServices.creatUser(jsonBody).enqueue(new Callback<UserRegistration.Body>() {
             @Override
             public void onResponse(Call<UserRegistration.Body> call, Response<UserRegistration.Body> response) {
 
                 if (response.isSuccessful()){
                     mutableLiveData.postValue("Success");
                     Log.e("TAG", "onResponse: "+"Success" );
-                    Log.e("size", "onFailure: "+response.body().getData().size());
+//                    Log.e("size", "onFailure: "+response.body().getData().size());
                     //hello
                 }
             }
