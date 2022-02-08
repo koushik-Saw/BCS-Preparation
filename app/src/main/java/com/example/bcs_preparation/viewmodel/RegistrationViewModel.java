@@ -20,7 +20,7 @@ public class RegistrationViewModel extends AndroidViewModel {
         repo = RegistrationRepo.getRegistrationRepo(application);
     }
 
-    public LiveData<List<UserRegistration.Body>> regUser2(String name, String phone, String password){
+    public LiveData<UserRegistration.Body> regUser2(String name, String phone, String password){
         return repo.regUser(name, phone, password);
     }
 }

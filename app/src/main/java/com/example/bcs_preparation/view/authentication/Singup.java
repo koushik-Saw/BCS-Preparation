@@ -21,9 +21,9 @@ public class Singup extends AppCompatActivity {
         setContentView(R.layout.activity_singup);
 
         viewModel = new ViewModelProvider(this).get(RegistrationViewModel.class);
-        viewModel.regUser2("D","01878077913","123456").observe(this, new Observer<List<UserRegistration.Body>>() {
+        viewModel.regUser2("D","01878077913","123456").observe(this, new Observer<UserRegistration.Body>() {
             @Override
-            public void onChanged(List<UserRegistration.Body> bodies) {
+            public void onChanged(UserRegistration.Body body) {
 
             }
         });
