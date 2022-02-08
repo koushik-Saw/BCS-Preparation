@@ -28,7 +28,7 @@ public class RegistrationRepo {
         return repo;
     }
 
-    UserRegistration.Body userRegistration;
+    UserRegistration userRegistration;
 
     public MutableLiveData<List<UserRegistration.Body>> regUser(String name,String phone, String password){
         MutableLiveData mutableLiveData = new MutableLiveData();
