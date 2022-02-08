@@ -19,7 +19,7 @@ public class Singup extends AppCompatActivity {
         ///jhnujuj
 
         viewModel = new ViewModelProvider(this).get(RegistrationViewModel.class);
-        viewModel.regUser2("D","99955533313","123456").observe(this, new Observer<String>() {
+        viewModel.regUser2("D","9999999","123456").observe(this, new Observer<String>() {
             @Override
             public void onChanged(String s) {
                 Log.e("tag", "onChanged: "+s);
