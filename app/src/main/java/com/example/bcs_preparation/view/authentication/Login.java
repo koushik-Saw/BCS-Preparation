@@ -40,6 +40,7 @@ public class Login extends AppCompatActivity {
                     public void onChanged(String s) {
                         Intent i = new Intent(getApplicationContext(), Dashboard.class);
                         startActivity(i);
+                        finish();
                     }
                 });
             }

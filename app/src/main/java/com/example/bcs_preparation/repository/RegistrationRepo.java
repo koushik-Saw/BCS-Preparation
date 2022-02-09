@@ -53,6 +53,10 @@ public class RegistrationRepo {
 //                    Log.e("size", "onFailure: "+response.body().getData().size());
                     //hello
                 }
+                else if(!response.isSuccessful()){
+                    mutableLiveData.postValue("User Already Exists");
+                    Log.e("TAG", "onResponse: "+"User Already Exists" );
+                }
             }
 
             @Override

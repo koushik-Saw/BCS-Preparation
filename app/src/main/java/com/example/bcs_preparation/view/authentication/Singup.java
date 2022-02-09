@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.LifecycleOwner;
@@ -43,9 +44,15 @@ public class Singup extends AppCompatActivity {
                     viewModel.regUser2(signname,signphone,signpass).observe(Singup.this, new Observer<String>() {
                         @Override
                         public void onChanged(String s) {
-                            Intent i = new Intent(getApplicationContext(), Login.class);
-                            startActivity(i);
-                            Log.e("tag", "onChanged: "+s);
+                            if(s.equals("Success")){
+                                Intent i = new Intent(getApplicationContext(), Login.class);
+                                startActivity(i);
+                                Toast.makeText(Singup.this, ""+s, Toast.LENGTH_SHORT).show();
+                                finish();
+                            }else {
+                                Toast.makeText(Singup.this, ""+s, Toast.LENGTH_SHORT).show();
+                            }
+
                         }
                     });
                 }
