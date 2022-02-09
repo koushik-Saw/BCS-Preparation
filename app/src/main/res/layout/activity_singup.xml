@@ -16,22 +16,11 @@
         android:src="@drawable/circulaavater"
         android:layout_marginBottom="20dp"
         />
-
     <EditText
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:id="@+id/etsignupfirstname"
-        android:hint="Enter First Name"
-        android:padding="5dp"
-        android:background="@drawable/textfield_border"
-        android:layout_marginBottom="20dp"
-        />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:id="@+id/etsignuplastname"
-        android:hint="Enter Last Name"
+        android:id="@+id/etsignupname"
+        android:hint="Enter Name"
         android:padding="5dp"
         android:background="@drawable/textfield_border"
         android:layout_marginBottom="20dp"
@@ -39,14 +28,16 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:hint="Enter Email"
+        android:id="@+id/etsignupphone"
+        android:hint="Enter Phone"
         android:padding="5dp"
         android:background="@drawable/textfield_border"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="20dp"
         />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="45dp"
+        android:id="@+id/etsignuppass"
         android:hint="Enter Password"
         android:padding="5dp"
         android:background="@drawable/textfield_border"
@@ -55,7 +46,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:id="@+id/etLoginphone"
+        android:id="@+id/etsignupconpass"
         android:hint="Confirm Password"
         android:padding="5dp"
         android:background="@drawable/textfield_border"
@@ -64,6 +55,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="45dp"
+        android:id="@+id/etsignupbtn"
         android:text="SignUp"
         android:background="@drawable/button_border"
         android:layout_marginBottom="10dp"
