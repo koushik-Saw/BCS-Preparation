@@ -10,4 +10,10 @@
         android:name="com.example.bcs_preparation.view.fragments.Home_Fragment"
         android:label="fragment_home_"
         tools:layout="@layout/fragment_home_" />
+    <fragment
+        android:id="@+id/account_fragment"
+        android:name="com.example.bcs_preparation.view.fragments.Account_fragment"
+        android:label="fragment_account_fragment"
+        tools:layout="@layout/fragment_account_fragment" />
+
 </navigation>

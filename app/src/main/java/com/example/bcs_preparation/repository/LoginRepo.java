@@ -42,7 +42,7 @@ public class LoginRepo {
         JsonObject jsonBody1 = new JsonObject();
         jsonBody1.add("body",jsonObject1);
 
-        Log.e("TAG", "regUser: "+jsonBody1.toString() );
+
         ApiServices apiServices = RetrofitInstance.getRetrofitInstance().create(ApiServices.class);
         Login Login = new Login();
 
@@ -51,7 +51,8 @@ public class LoginRepo {
             public void onResponse(Call<UserRegistration.Body> call, Response<UserRegistration.Body> response) {
                 if (response.isSuccessful()){
                     mutableLiveData1.postValue("Success");
-                    Log.e("TAG", "onResponse: "+"Login Successful");
+                    Log.e("TAG", "regUser: "+ jsonObject1.getAsJsonObject("1") );
+                    Log.e("TAG", "onResponse: "+ response);
 //                  Log.e("size", "onFailure: "+response.body().getData().size());
                 }
                 else {

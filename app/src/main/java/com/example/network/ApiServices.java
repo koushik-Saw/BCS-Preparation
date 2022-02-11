@@ -5,8 +5,10 @@ import com.google.gson.JsonObject;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.Field;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 
 public interface ApiServices {
 
@@ -17,4 +19,8 @@ public interface ApiServices {
 
     @POST("users/login/")
     Call<UserRegistration.Body> loginUser(@Body JsonObject jsonObject);
+
+    @POST("users/get-list/")
+    Call<UserRegistration.Body> getUser(@Path("phone") String phone);
+
 }

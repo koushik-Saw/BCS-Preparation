@@ -13,6 +13,7 @@ import android.widget.EditText;
 
 import com.example.bcs_preparation.R;
 import com.example.bcs_preparation.view.Dashboard;
+import com.example.bcs_preparation.view.MainActivity;
 import com.example.bcs_preparation.viewmodel.LoginViewModel;
 import com.example.bcs_preparation.viewmodel.RegistrationViewModel;
 
@@ -38,7 +39,7 @@ public class Login extends AppCompatActivity {
                 loginViewModel.logUser2(phone,pass).observe(Login.this, new Observer<String>() {
                     @Override
                     public void onChanged(String s) {
-                        Intent i = new Intent(getApplicationContext(), Dashboard.class);
+                        Intent i = new Intent(getApplicationContext(), MainActivity.class);
                         startActivity(i);
                         finish();
                     }
