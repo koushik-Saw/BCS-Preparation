@@ -6,8 +6,8 @@ import android.util.Log;
 import androidx.lifecycle.MutableLiveData;
 
 import com.example.bcs_preparation.model.UserRegistration;
-import com.example.network.ApiServices;
-import com.example.network.RetrofitInstance;
+import com.example.bcs_preparation.network.ApiServices;
+import com.example.bcs_preparation.network.RetrofitInstance;
 import com.google.gson.JsonObject;
 
 import retrofit2.Call;

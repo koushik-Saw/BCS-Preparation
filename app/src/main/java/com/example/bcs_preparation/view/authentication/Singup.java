@@ -41,12 +41,11 @@ public class Singup extends AppCompatActivity {
                 signconpass=signupconpass.getText().toString();
                 if(signpass.equals(signconpass)){
                     viewModel = new ViewModelProvider(Singup.this).get(RegistrationViewModel.class);
-                    viewModel.regUser2(signname,signphone,signpass).observe(Singup.this, new Observer<String>() {
+                    viewModel.regUser(signname,signphone,signpass).observe(Singup.this, new Observer<String>() {
                         @Override
                         public void onChanged(String s) {
                             if(s.equals("Success")){
-                                Intent i = new Intent(getApplicationContext(), Login.class);
-                                startActivity(i);
+                                startActivity(new Intent(getApplicationContext(), Login.class));
                                 Toast.makeText(Singup.this, ""+s, Toast.LENGTH_SHORT).show();
                                 finish();
                             }else {

@@ -4,51 +4,61 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.databinding.DataBindingUtil;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.bcs_preparation.R;
+import com.example.bcs_preparation.databinding.ActivityMainBinding;
+import com.example.bcs_preparation.preferences.AuthenticationPref;
+import com.example.bcs_preparation.utils.ConstantUtils;
 import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-    private ActionBarDrawerToggle actionBarDrawerToggle;
-    private DrawerLayout drawerLayout;
-    private Toolbar toolbar;
+public class MainActivity extends AppCompatActivity {
+
+    private ImageView imageMenu;
+    private TextView title;
+    private AuthenticationPref authPref;
+    private ActivityMainBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        drawerLayout = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.nav_view);
+        binding = DataBindingUtil.setContentView(this,R.layout.activity_main);
 
-        navigationView.setNavigationItemSelectedListener(this);
 
-        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,
-                R.string.open, R.string.close);
+        imageMenu = findViewById(R.id.imageMenu);
+        title = findViewById(R.id.title);
+        authPref = new AuthenticationPref(this);
 
-        drawerLayout.addDrawerListener(actionBarDrawerToggle);
-        actionBarDrawerToggle.setDrawerIndicatorEnabled(true);
-        actionBarDrawerToggle.syncState();
+        imageMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                binding.drawerLayout.openDrawer(GravityCompat.START);
+            }
+        });
+
+        binding.navView.setItemIconTintList(null);
+        NavController navController = Navigation.findNavController(this,R.id.nav_host_fragment);
+        NavigationUI.setupWithNavController(binding.navView,navController);
+
+        ConstantUtils.AuthPreference.ACCESS_TOKEN = authPref.getAccessToken();
+        //Log.e("accessToken", "onCreate: "+ConstantUtils.AuthPreference.ACCESS_TOKEN );
+
 
     }
 
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == R.id.nav_home) {
-            Navigation.findNavController(this,
-                    R.id.nav_host_fragment).navigate(R.id.home_Fragment);
 
-        } else if (item.getItemId() == R.id.nav_profile) {
-            Navigation.findNavController(this,
-                    R.id.nav_host_fragment).navigate(R.id.account_fragment);
-        }
-        drawerLayout.close();
-        return true;
-    }
 }

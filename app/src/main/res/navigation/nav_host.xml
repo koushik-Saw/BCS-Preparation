@@ -9,11 +9,29 @@
         android:id="@+id/home_Fragment"
         android:name="com.example.bcs_preparation.view.fragments.Home_Fragment"
         android:label="fragment_home_"
-        tools:layout="@layout/fragment_home_" />
+        tools:layout="@layout/fragment_home_" >
+        <action
+            android:id="@+id/action_home_Fragment_to_liveExamTypeFragment"
+            app:destination="@id/liveExamTypeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/account_fragment"
         android:name="com.example.bcs_preparation.view.fragments.Account_fragment"
         android:label="fragment_account_fragment"
         tools:layout="@layout/fragment_account_fragment" />
+    <fragment
+        android:id="@+id/liveExamTypeFragment"
+        android:name="com.example.bcs_preparation.view.fragments.LiveExamTypeFragment"
+        android:label="fragment_live_exam_type"
+        tools:layout="@layout/fragment_live_exam_type" >
+        <action
+            android:id="@+id/action_liveExamTypeFragment_to_examTypePreparationFragment"
+            app:destination="@id/examTypePreparationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/examTypePreparationFragment"
+        android:name="com.example.bcs_preparation.view.fragments.ExamTypePreparationFragment"
+        android:label="fragment_exam_type_preparation"
+        tools:layout="@layout/fragment_exam_type_preparation" />
 
 </navigation>
