@@ -6,6 +6,8 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
+import androidx.navigation.Navigator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.util.Log;
@@ -20,6 +22,7 @@ import com.example.bcs_preparation.databinding.FragmentExamTypePreparationBindin
 import com.example.bcs_preparation.model.ExamTypePreparationModel;
 import com.example.bcs_preparation.utils.InternetConnection;
 import com.example.bcs_preparation.viewmodel.ExamTypePreparationViewModel;
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.List;
 
@@ -66,6 +69,6 @@ public class ExamTypePreparationFragment extends Fragment implements ExamTypePre
 
     @Override
     public void itemClick(int position,View v) {
-        Toast.makeText(requireContext(), ""+position, Toast.LENGTH_SHORT).show();
+        Navigation.findNavController(v).navigate(R.id.action_examTypePreparationFragment_to_todayExamByTypeFragment);
     }
 }

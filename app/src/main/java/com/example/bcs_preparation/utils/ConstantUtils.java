@@ -12,5 +12,8 @@ public class ConstantUtils {
 
     public static class LiveExam{
         public static int LIVE_EXAM_Id = 0;
+        public static int LIVE_EXAM_ROUTINE = 0;
+        public static int TODAY_LIVE_EXAM_ROUTINE = 0;
+        public static int PREVIOUS_EXAM_ARKAYVED = 0;
     }
 }

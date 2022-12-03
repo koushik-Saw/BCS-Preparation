@@ -32,6 +32,25 @@
         android:id="@+id/examTypePreparationFragment"
         android:name="com.example.bcs_preparation.view.fragments.ExamTypePreparationFragment"
         android:label="fragment_exam_type_preparation"
-        tools:layout="@layout/fragment_exam_type_preparation" />
+        tools:layout="@layout/fragment_exam_type_preparation" >
+        <action
+            android:id="@+id/action_examTypePreparationFragment_to_todayExamByTypeFragment"
+            app:destination="@id/todayExamByTypeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/todayExamByTypeFragment"
+        android:name="com.example.bcs_preparation.view.fragments.TodayExamByTypeFragment"
+        android:label="fragment_today_exam_by_type"
+        tools:layout="@layout/fragment_today_exam_by_type" />
+    <fragment
+        android:id="@+id/todayExamByTypeLiveExamFragment"
+        android:name="com.example.bcs_preparation.view.fragments.TodayExamByTypeLiveExamFragment"
+        android:label="fragment_today_exam_by_type_live_exam"
+        tools:layout="@layout/fragment_today_exam_by_type_live_exam" />
+    <fragment
+        android:id="@+id/todayExamByTypeArkayevFragment"
+        android:name="com.example.bcs_preparation.view.fragments.TodayExamByTypeArkayevFragment"
+        android:label="fragment_today_exam_by_type_arkayev"
+        tools:layout="@layout/fragment_today_exam_by_type_arkayev" />
 
 </navigation>

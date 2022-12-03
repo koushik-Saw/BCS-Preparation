@@ -3,6 +3,7 @@ package com.example.bcs_preparation.network;
 import com.example.bcs_preparation.model.ExamTypePreparationModel;
 import com.example.bcs_preparation.model.LiveExamTypeModel;
 import com.example.bcs_preparation.model.LoginModel;
+import com.example.bcs_preparation.model.TodayExamByTypeLiveExamRoutineModel;
 import com.example.bcs_preparation.model.UserRegistration;
 import com.example.bcs_preparation.utils.ConstantUtils;
 import com.google.gson.JsonObject;
@@ -33,5 +34,9 @@ public interface ApiServices {
     @POST("live_exam_type/get-by-parent")
     Call<ExamTypePreparationModel> getExamTypePreparationData(@Body JsonObject jsonObject);
 
+    @POST("live_exam/get-today-exam-by-exam-type")
+    Call<TodayExamByTypeLiveExamRoutineModel> getTodayExamByTypeLiveExamRoutineModel(@Body JsonObject jsonObject);
 
+    @POST("live_exam/get-previous-by-exam-type")
+    Call<TodayExamByTypeLiveExamRoutineModel> getPreviousExamByType(@Body JsonObject jsonObject);
 }

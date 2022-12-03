@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.bcs_preparation.databinding.ExamTypePreparationRowItemBinding;
 import com.example.bcs_preparation.model.ExamTypePreparationModel;
+import com.example.bcs_preparation.utils.ConstantUtils;
 
 import java.util.List;
 
@@ -60,6 +61,7 @@ public class ExamTypePreparationAdapter extends RecyclerView.Adapter<ExamTypePre
 
         @Override
         public void onClick(View v) {
+            ConstantUtils.LiveExam.LIVE_EXAM_ROUTINE = examTypeList.get(getAdapterPosition()).getId();
             mItemClickListener.itemClick(getAdapterPosition(),v);
         }
     }

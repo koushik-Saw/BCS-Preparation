@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="liveExam"
+            type="com.example.bcs_preparation.model.TodayExamByTypeLiveExamRoutineModel.Datum" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+        android:layout_margin="7dp"
+        android:padding="5dp"
+        android:focusable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/liveExamRowItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_margin="1dp"
+                android:padding="3dp"
+                android:text="@{liveExam.topic}"
+                tools:text="বাংলা সাহিত্যের প্রধান কবি সাহিত্যিক ২" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_margin="1dp"
+                android:padding="3dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center_horizontal"
+                    tools:text="প্রশ্ন -- "
+                    android:text="প্রশ্ন -- "/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center_horizontal"
+                    tools:text="20"
+                    android:text="@{liveExam.numberOfQuestion.toString()}"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center_horizontal"
+                    tools:text=" টি"
+                    android:text=" টি"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center_horizontal"
+                    tools:text="সময় -- "
+                    android:text="সময় -- "/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center_horizontal"
+                    tools:text="৫"
+                    android:text="@{liveExam.totalTime.toString()}" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center_horizontal"
+                    tools:text=" মিনিট"
+                    android:text=" মিনিট"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="1dp">
+
+                <Button
+                    android:id="@+id/give_exam_btn_row_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="পরীক্ষা দিন"
+                    android:background="@drawable/textfield_border" />
+
+                <Button
+                    android:id="@+id/syllabus_btn_row_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="সিলেবাস "
+                    android:background="@drawable/textfield_border" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>
