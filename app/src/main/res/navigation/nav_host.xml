@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host"
+    app:startDestination="@id/home_Fragment">
+
+    <fragment
+        android:id="@+id/home_Fragment"
+        android:name="com.example.bcs_preparation.view.fragments.Home_Fragment"
+        android:label="fragment_home_"
+        tools:layout="@layout/fragment_home_" >
+        <action
+            android:id="@+id/action_home_Fragment_to_liveExamTypeFragment"
+            app:destination="@id/liveExamTypeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/account_fragment"
+        android:name="com.example.bcs_preparation.view.fragments.Account_fragment"
+        android:label="fragment_account_fragment"
+        tools:layout="@layout/fragment_account_fragment" />
+    <fragment
+        android:id="@+id/liveExamTypeFragment"
+        android:name="com.example.bcs_preparation.view.fragments.LiveExamTypeFragment"
+        android:label="fragment_live_exam_type"
+        tools:layout="@layout/fragment_live_exam_type" >
+        <action
+            android:id="@+id/action_liveExamTypeFragment_to_examTypePreparationFragment"
+            app:destination="@id/examTypePreparationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/examTypePreparationFragment"
+        android:name="com.example.bcs_preparation.view.fragments.ExamTypePreparationFragment"
+        android:label="fragment_exam_type_preparation"
+        tools:layout="@layout/fragment_exam_type_preparation" >
+        <action
+            android:id="@+id/action_examTypePreparationFragment_to_todayExamByTypeFragment"
+            app:destination="@id/todayExamByTypeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/todayExamByTypeFragment"
+        android:name="com.example.bcs_preparation.view.fragments.TodayExamByTypeFragment"
+        android:label="fragment_today_exam_by_type"
+        tools:layout="@layout/fragment_today_exam_by_type" />
+    <fragment
+        android:id="@+id/todayExamByTypeLiveExamFragment"
+        android:name="com.example.bcs_preparation.view.fragments.TodayExamByTypeLiveExamFragment"
+        android:label="fragment_today_exam_by_type_live_exam"
+        tools:layout="@layout/fragment_today_exam_by_type_live_exam" />
+    <fragment
+        android:id="@+id/todayExamByTypeArkayevFragment"
+        android:name="com.example.bcs_preparation.view.fragments.TodayExamByTypeArkayevFragment"
+        android:label="fragment_today_exam_by_type_arkayev"
+        tools:layout="@layout/fragment_today_exam_by_type_arkayev" >
+        <action
+            android:id="@+id/action_todayExamByTypeArkayevFragment_to_rankListFragment"
+            app:destination="@id/rankListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rankListFragment"
+        android:name="com.example.bcs_preparation.view.fragments.RankListFragment"
+        android:label="fragment_rank_list"
+        tools:layout="@layout/fragment_rank_list" />
+    <fragment
+        android:id="@+id/examQuestionFragment"
+        android:name="com.example.bcs_preparation.view.fragments.ExamQuestionFragment"
+        android:label="fragment_exam_question"
+        tools:layout="@layout/fragment_exam_question" >
+        <action
+            android:id="@+id/action_ExamQuestionFragment_to_playlistfragment"
+            app:destination="@id/playlistfragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/playlistfragment"
+        android:name="com.example.bcs_preparation.view.fragments.FavouriteQuestionPlaylist"
+        android:label="fragment_favourite_palylist"
+        tools:layout="@layout/fragment_favourite_question_playlist" />
+</navigation>

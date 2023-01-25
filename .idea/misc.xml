@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Personal/A_projects/BCS-Preparation/app/src/main/res/drawable/button_border.xml" value="0.3148148148148148" />
+        <entry key="..\:/Personal/A_projects/BCS-Preparation/app/src/main/res/drawable/textfield_border.xml" value="0.3148148148148148" />
+        <entry key="..\:/Personal/A_projects/BCS-Preparation/app/src/main/res/layout/activity_dashboard.xml" value="0.28532608695652173" />
+        <entry key="..\:/Personal/A_projects/BCS-Preparation/app/src/main/res/layout/activity_login.xml" value="0.5" />
+        <entry key="..\:/Personal/A_projects/BCS-Preparation/app/src/main/res/layout/activity_main.xml" value="0.1398148148148148" />
+        <entry key="..\:/Personal/A_projects/BCS-Preparation/app/src/main/res/layout/activity_singup.xml" value="0.5" />
+        <entry key="..\:/Personal/A_projects/BCS-Preparation/app/src/main/res/layout/app_bar_main.xml" value="0.35280797101449274" />
+        <entry key="..\:/Personal/A_projects/BCS-Preparation/app/src/main/res/layout/content_main.xml" value="0.35280797101449274" />
+        <entry key="..\:/Personal/A_projects/BCS-Preparation/app/src/main/res/layout/fragment_account_fragment.xml" value="0.38697916666666665" />
+        <entry key="..\:/Personal/A_projects/BCS-Preparation/app/src/main/res/layout/fragment_home_.xml" value="0.38697916666666665" />
+        <entry key="..\:/Personal/A_projects/BCS-Preparation/app/src/main/res/menu/drawer_menu.xml" value="0.38333333333333336" />
+        <entry key="..\:/ProjectsDetails/BCS-Preparation/app/src/main/res/drawable-v24/ic_baseline_menu_24.xml" value="0.165" />
+        <entry key="..\:/ProjectsDetails/BCS-Preparation/app/src/main/res/drawable/button_border.xml" value="0.138" />
+        <entry key="..\:/ProjectsDetails/BCS-Preparation/app/src/main/res/drawable/ic_baseline_done_24.xml" value="0.2245" />
+        <entry key="..\:/ProjectsDetails/BCS-Preparation/app/src/main/res/drawable/spinner_background.xml" value="0.1705" />
+        <entry key="..\:/ProjectsDetails/BCS-Preparation/app/src/main/res/drawable/textfield_border.xml" value="0.138" />
+        <entry key="..\:/ProjectsDetails/BCS-Preparation/app/src/main/res/layout/activity_dashboard.xml" value="0.3625" />
+        <entry key="..\:/ProjectsDetails/BCS-Preparation/app/src/main/res/layout/activity_login.xml" value="0.18541666666666667" />
+        <entry key="..\:/ProjectsDetails/BCS-Preparation/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/ProjectsDetails/BCS-Preparation/app/src/main/res/layout/activity_singup.xml" value="0.36666666666666664" />
+        <entry key="..\:/ProjectsDetails/BCS-Preparation/app/src/main/res/layout/app_bar_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/ProjectsDetails/BCS-Preparation/app/src/main/res/layout/content_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/ProjectsDetails/BCS-Preparation/app/src/main/res/layout/exam_question_row_item.xml" value="0.5033670033670034" />
+        <entry key="..\:/ProjectsDetails/BCS-Preparation/app/src/main/res/layout/exam_type_preparation_row_item.xml" value="0.3614583333333333" />
+        <entry key="..\:/ProjectsDetails/BCS-Preparation/app/src/main/res/layout/fragment_account_fragment.xml" value="0.3625" />
+        <entry key="..\:/ProjectsDetails/BCS-Preparation/app/src/main/res/layout/fragment_exam_question.xml" value="0.3625" />
+        <entry key="..\:/ProjectsDetails/BCS-Preparation/app/src/main/res/layout/fragment_exam_type_preparation.xml" value="0.3625" />
+        <entry key="..\:/ProjectsDetails/BCS-Preparation/app/src/main/res/layout/fragment_ezam_type_preparetion.xml" value="0.3625" />
+        <entry key="..\:/ProjectsDetails/BCS-Preparation/app/src/main/res/layout/fragment_favourite_question_playlist.xml" value="0.33" />
+        <entry key="..\:/ProjectsDetails/BCS-Preparation/app/src/main/res/layout/fragment_home_.xml" value="0.42671394799054374" />
+        <entry key="..\:/ProjectsDetails/BCS-Preparation/app/src/main/res/layout/fragment_live_exam_type.xml" value="0.3625" />
+        <entry key="..\:/ProjectsDetails/BCS-Preparation/app/src/main/res/layout/fragment_rank_list.xml" value="0.36666666666666664" />
+        <entry key="..\:/ProjectsDetails/BCS-Preparation/app/src/main/res/layout/fragment_today_exam_by_type.xml" value="0.3625" />
+        <entry key="..\:/ProjectsDetails/BCS-Preparation/app/src/main/res/layout/fragment_today_exam_by_type_arkayev.xml" value="0.3625" />
+        <entry key="..\:/ProjectsDetails/BCS-Preparation/app/src/main/res/layout/fragment_today_exam_by_type_live_exam.xml" value="0.3625" />
+        <entry key="..\:/ProjectsDetails/BCS-Preparation/app/src/main/res/layout/live_exam_type_row_item.xml" value="0.3614583333333333" />
+        <entry key="..\:/ProjectsDetails/BCS-Preparation/app/src/main/res/layout/nested_exam_question_option_row_item.xml" value="0.42947368421052634" />
+        <entry key="..\:/ProjectsDetails/BCS-Preparation/app/src/main/res/layout/rank_list_row_item.xml" value="0.365625" />
+        <entry key="..\:/ProjectsDetails/BCS-Preparation/app/src/main/res/layout/today_exam_by_type_arkyved.xml" value="0.3614583333333333" />
+        <entry key="..\:/ProjectsDetails/BCS-Preparation/app/src/main/res/layout/today_exam_by_type_arkyved_row_item.xml" value="0.3625" />
+        <entry key="..\:/ProjectsDetails/BCS-Preparation/app/src/main/res/layout/today_exam_by_type_live_exam_row_item.xml" value="0.3273885350318471" />
+        <entry key="..\:/ProjectsDetails/BCS-Preparation/app/src/main/res/menu/drawer_menu.xml" value="0.36666666666666664" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.28532608695652173" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

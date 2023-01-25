@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    >
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/PlaylistID"
+        android:text="Playlist name"
+        android:textAllCaps="false"
+        android:drawableStart="@drawable/ic_baseline_menu_book_24"
+        android:drawablePadding="5dp"
+        android:layout_marginTop="5dp"
+        />
+</LinearLayout>
