@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_home_Fragment_to_liveExamTypeFragment"
             app:destination="@id/liveExamTypeFragment" />
+        <action
+            android:id="@+id/action_home_Fragment_to_favouritePlaylistNameFragment"
+            app:destination="@id/favouritePlaylistNameFragment" />
     </fragment>
     <fragment
         android:id="@+id/account_fragment"
@@ -76,4 +79,9 @@
         android:name="com.example.bcs_preparation.view.fragments.FavouriteQuestionPlaylist"
         android:label="fragment_favourite_palylist"
         tools:layout="@layout/fragment_favourite_question_playlist" />
+    <fragment
+        android:id="@+id/favouritePlaylistNameFragment"
+        android:name="com.example.bcs_preparation.FavouritePlaylistNameFragment"
+        android:label="fragment_favourite_playlist_name"
+        tools:layout="@layout/fragment_favourite_playlist_name" />
 </navigation>

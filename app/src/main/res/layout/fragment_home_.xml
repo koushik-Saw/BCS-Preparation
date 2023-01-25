@@ -58,6 +58,14 @@
                     android:background="@drawable/textfield_border"
                     android:text="Year wise Question Bank" />
 
+                <Button
+                    android:id="@+id/homeFragmentFavoriteBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/textfield_border"
+                    android:text="Favorite Question" />
+
 
             </LinearLayout>
 

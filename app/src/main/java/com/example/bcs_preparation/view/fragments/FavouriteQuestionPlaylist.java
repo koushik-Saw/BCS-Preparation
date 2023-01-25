@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.example.bcs_preparation.R;
 import com.example.bcs_preparation.adapter.FavouriteQuestionPlaylistAdapter;
 import com.example.bcs_preparation.databinding.FragmentFavouriteQuestionPlaylistBinding;
+import com.example.bcs_preparation.model.FavouriteQuestionPlaylistModel;
 import com.example.bcs_preparation.viewmodel.FavouriteQuestionPlaylistViewModel;
 
 import java.util.List;
@@ -32,12 +33,9 @@ public class FavouriteQuestionPlaylist extends DialogFragment {
         binding = FragmentFavouriteQuestionPlaylistBinding.inflate(inflater,container,false);
         viewModel = new ViewModelProvider(requireActivity()).get(FavouriteQuestionPlaylistViewModel.class);
 
-        viewModel.getFavoriteQuestionPlayListName().observe(requireActivity(), new Observer<List<String>>() {
+        viewModel.getFavoriteQuestionPlayListName().observe(requireActivity(), new Observer<List<FavouriteQuestionPlaylistModel.Datum>>() {
             @Override
-            public void onChanged(List<String> playList) {
-                for(int i=0;i<playList.size();i++){
-                    Log.e("playListName", "onChanged: "+playList.get(i) );
-                }
+            public void onChanged(List<FavouriteQuestionPlaylistModel.Datum> data) {
                 favouriteQuestionPlaylistAdapter = new FavouriteQuestionPlaylistAdapter(FavouriteQuestionPlaylist.this::ocClick);
                 binding.FavQuesPlaylistRecVID.setAdapter(favouriteQuestionPlaylistAdapter);
             }

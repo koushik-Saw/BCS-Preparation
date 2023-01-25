@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.MutableLiveData;
 
+import com.example.bcs_preparation.model.FavouriteQuestionPlaylistModel;
 import com.example.bcs_preparation.repository.FavouriteQuestionPlaylistRepository;
 
 import java.util.List;
@@ -18,7 +19,7 @@ public class FavouriteQuestionPlaylistViewModel extends AndroidViewModel {
         repository = new FavouriteQuestionPlaylistRepository(application);
     }
 
-    public MutableLiveData<List<String>> getFavoriteQuestionPlayListName(){
+    public MutableLiveData<List<FavouriteQuestionPlaylistModel.Datum>> getFavoriteQuestionPlayListName(){
         return repository.getFavoriteQuestionPlayListName();
     }
 }

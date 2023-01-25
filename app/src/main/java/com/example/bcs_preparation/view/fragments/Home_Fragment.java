@@ -39,6 +39,12 @@ public class Home_Fragment extends Fragment {
                 Navigation.findNavController(v).navigate(R.id.action_home_Fragment_to_liveExamTypeFragment);
             }
         });
+        binding.homeFragmentFavoriteBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(v).navigate(R.id.action_home_Fragment_to_favouritePlaylistNameFragment);
+            }
+        });
 
         return binding.getRoot();
     }

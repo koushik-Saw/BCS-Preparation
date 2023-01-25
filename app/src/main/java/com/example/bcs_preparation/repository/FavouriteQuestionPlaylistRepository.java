@@ -22,13 +22,13 @@ public class FavouriteQuestionPlaylistRepository {
     private Context context;
     private MutableLiveData mutableLiveData;
     private FavouriteQuestionPlaylistModel favouriteQuestionPlaylistModel;
-    private List<String> playList = new ArrayList<>();
+    private List<FavouriteQuestionPlaylistModel.Datum> playList = new ArrayList<>();
 
     public FavouriteQuestionPlaylistRepository(Context context) {
         this.context = context;
     }
 
-    public MutableLiveData<List<String>> getFavoriteQuestionPlayListName(){
+    public MutableLiveData<List<FavouriteQuestionPlaylistModel.Datum>> getFavoriteQuestionPlayListName(){
         mutableLiveData = new MutableLiveData();
 
         JsonObject jsonObject = new JsonObject();
@@ -48,9 +48,10 @@ public class FavouriteQuestionPlaylistRepository {
                     Log.e("favoriteQuestionName", "onResponse: hello" );
                     if(response.isSuccessful()){
                         Log.e("favoriteQuestionName", "onResponse: hello1" );
+                        playList.clear();
                         favouriteQuestionPlaylistModel = response.body();
                         for(int i=0;i<response.body().getBody().getData().size();i++){
-                            playList.add(response.body().getBody().getData().get(i).getName());
+                            playList.add(response.body().getBody().getData().get(i));
                         }
 
 
