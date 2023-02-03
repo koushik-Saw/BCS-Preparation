@@ -6,6 +6,7 @@ import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
@@ -31,12 +32,15 @@ public class FavouriteQuestionPlaylist extends DialogFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentFavouriteQuestionPlaylistBinding.inflate(inflater,container,false);
+
         viewModel = new ViewModelProvider(requireActivity()).get(FavouriteQuestionPlaylistViewModel.class);
+
+        binding.FavQuesPlaylistRecVID.setLayoutManager(new LinearLayoutManager(requireContext()));
 
         viewModel.getFavoriteQuestionPlayListName().observe(requireActivity(), new Observer<List<FavouriteQuestionPlaylistModel.Datum>>() {
             @Override
             public void onChanged(List<FavouriteQuestionPlaylistModel.Datum> data) {
-                favouriteQuestionPlaylistAdapter = new FavouriteQuestionPlaylistAdapter(FavouriteQuestionPlaylist.this::ocClick);
+                favouriteQuestionPlaylistAdapter = new FavouriteQuestionPlaylistAdapter(requireContext(),data);
                 binding.FavQuesPlaylistRecVID.setAdapter(favouriteQuestionPlaylistAdapter);
             }
         });
@@ -45,7 +49,4 @@ public class FavouriteQuestionPlaylist extends DialogFragment {
         return binding.getRoot();
     }
 
-    private void ocClick(int i, View view) {
-        Toast.makeText(getContext(), "Playlsit", Toast.LENGTH_SHORT).show();
-    }
 }
