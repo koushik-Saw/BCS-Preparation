@@ -23,7 +23,7 @@ import com.example.bcs_preparation.viewmodel.FavouriteQuestionPlaylistViewModel;
 
 import java.util.List;
 
-public class FavouriteQuestionPlaylist extends DialogFragment {
+public class FavouriteQuestionPlaylist extends DialogFragment{
 
     FavouriteQuestionPlaylistAdapter favouriteQuestionPlaylistAdapter;
     private FavouriteQuestionPlaylistViewModel viewModel;
@@ -36,6 +36,13 @@ public class FavouriteQuestionPlaylist extends DialogFragment {
         viewModel = new ViewModelProvider(requireActivity()).get(FavouriteQuestionPlaylistViewModel.class);
 
         binding.FavQuesPlaylistRecVID.setLayoutManager(new LinearLayoutManager(requireContext()));
+        binding.CreatePlaylistID.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CreatePlaylistFragment createPlaylistFragment = new CreatePlaylistFragment();
+                createPlaylistFragment.show(getParentFragmentManager(),"");
+            }
+        });
 
         viewModel.getFavoriteQuestionPlayListName().observe(requireActivity(), new Observer<List<FavouriteQuestionPlaylistModel.Datum>>() {
             @Override
@@ -48,5 +55,4 @@ public class FavouriteQuestionPlaylist extends DialogFragment {
 
         return binding.getRoot();
     }
-
 }

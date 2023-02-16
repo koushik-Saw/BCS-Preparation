@@ -52,6 +52,7 @@ public class ExamTypePreparationAdapter extends RecyclerView.Adapter<ExamTypePre
             super(itemBinding.getRoot());
             this.binding = itemBinding;
             this.mItemClickListener = itemClickListener;
+
             binding.liveExamTypeRowItemBtn.setOnClickListener(this);
         }
 

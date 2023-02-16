@@ -20,9 +20,11 @@ public class FavouriteQuestionPlaylistAdapter extends RecyclerView.Adapter<Favou
     private Context context;
     private List<FavouriteQuestionPlaylistModel.Datum> playList;
 
+
     public FavouriteQuestionPlaylistAdapter(Context context, List<FavouriteQuestionPlaylistModel.Datum> playList) {
         this.context = context;
         this.playList = playList;
+
     }
 
 
@@ -50,13 +52,18 @@ public class FavouriteQuestionPlaylistAdapter extends RecyclerView.Adapter<Favou
 
         private FavouriteQuestionPlaylistBinding mBinding;
 
+
         public FavouriteQuestionPlaylsitViewholder(FavouriteQuestionPlaylistBinding mBinding) {
             super(mBinding.getRoot());
             this.mBinding = mBinding;
+
         }
 
         public void bind(FavouriteQuestionPlaylistModel.Datum playList){
             mBinding.setPlayList(playList);
         }
+
+
     }
+
 }
