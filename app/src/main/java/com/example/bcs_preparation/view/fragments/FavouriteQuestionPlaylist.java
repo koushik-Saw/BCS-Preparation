@@ -35,12 +35,22 @@ public class FavouriteQuestionPlaylist extends DialogFragment{
 
         viewModel = new ViewModelProvider(requireActivity()).get(FavouriteQuestionPlaylistViewModel.class);
 
+
+
         binding.FavQuesPlaylistRecVID.setLayoutManager(new LinearLayoutManager(requireContext()));
         binding.CreatePlaylistID.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 CreatePlaylistFragment createPlaylistFragment = new CreatePlaylistFragment();
                 createPlaylistFragment.show(getParentFragmentManager(),"");
+
+            }
+        });
+
+        binding.CreatePlaylistCancleID.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
 

@@ -81,12 +81,14 @@ public class TodayExamByTypeLiveExamRoutineRepository {
         apiServices.getPreviousExamByType(jsonObjectBody).enqueue(new Callback<TodayExamByTypeLiveExamRoutineModel>() {
             @Override
             public void onResponse(Call<TodayExamByTypeLiveExamRoutineModel> call, Response<TodayExamByTypeLiveExamRoutineModel> response) {
-                if(response.isSuccessful()){
-                    todayExamByTypeLiveExamRoutineModel = response.body();
-                    result = todayExamByTypeLiveExamRoutineModel.getBody().getData();
-                    mutableLiveData.postValue(result);
-                    Log.e("resSize", "onResponse: hello "+response.body().getBody().getData().get(3).getId() );
-                }
+                try{
+                    if(response.isSuccessful()){
+                        todayExamByTypeLiveExamRoutineModel = response.body();
+                        result = todayExamByTypeLiveExamRoutineModel.getBody().getData();
+                        mutableLiveData.postValue(result);
+                    }
+                }catch (Exception e){}
+
 
             }
 

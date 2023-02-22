@@ -7,6 +7,7 @@ import com.example.bcs_preparation.model.LiveExamTypeModel;
 import com.example.bcs_preparation.model.LoginModel;
 import com.example.bcs_preparation.model.RankListModel;
 import com.example.bcs_preparation.model.TodayExamByTypeLiveExamRoutineModel;
+import com.example.bcs_preparation.model.UserFavoriteQuestionCreateModel;
 import com.example.bcs_preparation.model.UserRegistration;
 import com.example.bcs_preparation.utils.ConstantUtils;
 import com.google.gson.JsonObject;
@@ -51,5 +52,8 @@ public interface ApiServices {
 
     @POST("user_favourite_question/get-by-user")
     Call<FavouriteQuestionPlaylistModel> getFavoriteQuestionPlayListName(@Body JsonObject jsonObject);
+
+    @POST("user_favourite_question/create")
+    Call<UserFavoriteQuestionCreateModel> createFavoriteQuestion(@Body JsonObject jsonObject);
 
 }

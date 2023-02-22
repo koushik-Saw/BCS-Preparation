@@ -9,7 +9,6 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.bcs_preparation.R;
 import com.example.bcs_preparation.databinding.FavouriteQuestionPlaylistBinding;
 import com.example.bcs_preparation.model.FavouriteQuestionPlaylistModel;
 
