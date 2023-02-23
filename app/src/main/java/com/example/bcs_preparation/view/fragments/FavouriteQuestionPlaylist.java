@@ -43,14 +43,7 @@ public class FavouriteQuestionPlaylist extends DialogFragment{
             public void onClick(View v) {
                 CreatePlaylistFragment createPlaylistFragment = new CreatePlaylistFragment();
                 createPlaylistFragment.show(getParentFragmentManager(),"");
-
-            }
-        });
-
-        binding.CreatePlaylistCancleID.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
+                getDialog().cancel();
             }
         });
 

@@ -1,7 +1,9 @@
 package com.example.bcs_preparation.view.fragments;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
@@ -39,11 +41,18 @@ public class CreatePlaylistFragment extends DialogFragment {
                     @Override
                     public void onChanged(String s) {
                         Log.e("detailsSuccess", "onChanged: "+s );
+                        getDialog().cancel();
                     }
                 });
             }
         });
 
         return binding.getRoot();
+    }
+
+    @Override
+    public void onCancel(@NonNull DialogInterface dialog) {
+        FavouriteQuestionPlaylist favouriteQuestionPlaylist = new FavouriteQuestionPlaylist();
+        favouriteQuestionPlaylist.show(getParentFragmentManager(),"");
     }
 }
